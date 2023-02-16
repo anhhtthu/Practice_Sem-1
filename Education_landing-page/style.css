@@ -161,6 +161,7 @@ a.header__category:hover:before {
     position: relative;
     z-index: 1;
     overflow: hidden;
+
 }
 
 .hero__btn:before {
@@ -174,6 +175,7 @@ a.header__category:hover:before {
     z-index: -1;
     transform: translateX(-100%);
     transition: .5s ease;
+
 }
 
 .hero__btn:hover:before {
