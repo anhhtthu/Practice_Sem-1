@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700&family=Roboto+Slab:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;
+}
+
+:root {
+    --sub-color: #9B948E;
+}
+
+body {
+    background-color: #E8E6E3;
+}
+
+.container {
+    max-width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-rows: 15vh 65vh 20vh 32vh auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "header header header" 
+    "hero hero hero" 
+    "partner partner partner" 
+    "motto motto motto" 
+    "employee employee employee";
+    position: relative;
+}
+
+.container::before {
+    content: url(./asset/Union.png);
+    position: absolute;
+    top: 0;
+    left: -2%;
+    z-index: -10;
+}
+
+header {
+    width: 100%;
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: aquamarine; */
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav.header__navbar {
+    width: 35%;
+    font-size: 1rem;
+
+}
+
+a.header__category {
+    position: relative;
+}
+
+a.header__category:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    background-color: #9B948E;
+    height: 1.5px;
+    width: 100%;
+    transition: all .3s ease-in-out 0s;
+    transform: scaleX(0);
+}
+
+a.header__category:hover:before {
+    transform: scaleX(1);
+    background-color: black;
+    height: 1.5px;
+    width: 100%;
+}
+
+.header__brand {
+    display: inline-block;
+    font-size: 2rem;
+    padding-left: 3em;
+}
+
+.header__sign-in {
+    display: block;
+    font-size: 1rem;
+    border: 1px black solid;
+    border-radius: .4em;
+    padding: .5em 1.5em;
+    background-color: transparent;
+    margin-right: 5em;
+    position: relative;
+    /* transition: .5s; */
+    overflow: hidden;
+    
+}
+
+.header__sign-in:before {
+    content: '';
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: .5s ease;
+}
+
+.header__sign-in:hover:before {
+    transform: translateX(0);
+}
+
+.header__sign-in:hover {
+    color: #E8E6E3;
+}
+
+.hero {
+    grid-area: hero;
+    width: 100%;
+    display: flex;
+    align-self: center;
+}
+
+.hero__caption {
+    width: 50%;
+    float: left;
+    padding: 6em;
+}
+
+.hero__title {
+    font-size: 3.4rem;
+    line-height: 1.5em;
+    font-weight: 600;
+}
+
+.hero__sub-title {
+    font-size: 1rem;
+    color: #9B948E;
+    margin-top: 1.5em;
+    margin-bottom: 2.5em;
+    line-height: 1.7em;
+}
+
+.hero__btn {
+    display: inline-block;
+    padding: .5em 1em;
+    background-color: #96C67F;
+    border-radius: .4em;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero__btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: .5s ease;
+}
+
+.hero__btn:hover:before {
+    transform: translateX(0);
+    color: black;
+}
+
+.hero__img-holder {
+    width: 50%;
+    float: left;
+    padding: 2em 4em;
+    position: relative;
+}
+
+img.hero__figure-0 {
+    width: 65%;
+    animation-name: bounce;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    transform-origin: top;
+    border-radius: 20em;
+    box-shadow: rgba(17, 12, 46, 0.163) 0px 48px 100px 0px;
+    
+}
+
+@keyframes bounce {
+    0% {transform: translateY(20px);}
+    50% {transform: translateY(0px);}
+    100% {transform: translateY(20px);}
+}    
+
+img.hero__decor-1 {
+    width: 10%;
+    position: absolute;
+    bottom: 42%;
+    left: 58%;
+    border-radius: 50em;
+    box-shadow: rgba(17, 12, 46, 0.163) 0px 48px 100px 0px;
+
+}
+
+img.hero__decor-2 {
+    width: 20%;
+    border-radius: 1em;
+    position: absolute;
+    bottom: 3%;
+    left: 13%;
+    box-shadow: rgba(17, 12, 46, 0.089) 0px 48px 100px 0px;
+}
+
+.partner {
+    grid-area: partner;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* margin-top: 3em; */
+}
+
+.partner__caption {
+    font-size: 1rem;
+    display: inline-block;
+    font-weight: 500;
+    margin-bottom: 1.5em;
+}
+
+.partner__logo-holder {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-holder__item {
+    width: 9%;
+    object-fit: cover;
+}
+
+.motto {
+    grid-area: motto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.motto p {
+    font-size: 1.1rem;
+    margin-bottom: 1em;
+    font-weight: 500;
+}
+
+.motto h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+}
+
+.motto-2::before {
+    content: '';
+    background-color: #96C67F;
+    width: 39%;
+    height: 6px;
+    z-index: -1;
+    position: absolute;
+    top: 60%;
+    left: 62%;
+}
+
+.employee {
+    grid-area: employee;
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.employee__card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr 1fr;
+    grid-template-areas: "figure" "info";
+    width: 20%;
+    margin-bottom: 5%;
+    transition: .5s ease;
+    cursor: pointer;
+    border-radius: 1.5em;
+}
+
+.employee__card:hover {
+    box-shadow: rgba(17, 12, 46, 0.199) 0px 48px 100px 0px;
+    transform: translate(0,-20px);
+    -webkit-transform: translate(0,-20px);
+}
+
+.employee__figure {
+    grid-area: figure;
+    border-radius: 1.5em 1.5em 0 0;
+}
+
+.employee__info {
+    grid-area: info;
+    border-radius: 0 0 1.5em 1.5em;
+    background-color: #FFFFFF;
+    padding: 1em;
+}
+
+.employee__name {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.employee__caption {
+    color: var(--sub-color);
+    font-size: 1rem;
+}

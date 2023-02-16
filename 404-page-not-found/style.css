@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+ * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'plus jakarta sans', sans-serif;
+}
+
+:root {
+    --main-color: #f3f3f3;
+}
+
+body {
+    background-color: #1e1e1e;
+}
+
+.container {
+    width: 40%;
+    /* border: 1px red solid; */
+    height: auto;
+    margin: 0 auto;
+    color: var(--main-color);
+    background-image: url(./asset/outerspace\ \(1\).png);
+    border-radius: 3em;
+    background-position: 100%;
+    box-shadow: rgb(98 161 223 / 20%) 10px 10px 30px;
+    background-size: 190%;
+    margin-top: 9%;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 1.5em;
+    margin-left: 1em;
+    position: relative;
+}
+
+.header--logo {
+    font-family: 'poppins', sans-serif;
+    background: linear-gradient(93.99deg, #1DFFAE 8.13%, #581DFF 120.87%);
+    -webkit-text-fill-color: transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    display: inline-block;
+    padding: .5em 1em;
+    -webkit-background-clip: text;
+}
+
+.header--nav {
+    display: flex;
+    margin: 0 auto;
+    width: 55%;
+    font-size: .75rem;
+    justify-content: space-around; 
+    position: absolute;
+    left: 22%;
+    
+}
+
+.header--category {
+    list-style: none;
+}
+
+.error-cont {
+width: 55%;
+padding-left: 5%;
+padding-bottom: 10%;
+}
+
+.error-cont--no-issue {
+    font-size: 6.25rem;
+    font-weight: 800;
+    display: block;
+    padding-bottom: 3%;
+    padding-top: 2%;
+    animation-name: bounce;
+    animation-duration: 3.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0);}
+    50% { transform: translateY(25px);}
+    100% { transform: translateY(0);}
+}
+
+.error-cont--page-not-found {
+    font-size: 1.75rem;
+    display: block;
+    padding-bottom: 6%;
+}
+
+.error-cont--description {
+    font-size: 1rem;
+}
+
+.back-to-home {
+    color: #581DFF;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    float: left;
+    position: relative;
+}
+
+footer {
+    padding-left: 5%;
+    padding-bottom: 10%;
+    width: 40%;
+    height: auto;
+}
+
+.gg-chevron-right {
+    float: left;
+    display: inline-block;
+    padding-left: 1.5em;
+    color: #581DFF;
+    font-size: 1rem;
+}
