@@ -1,0 +1,30 @@
+@media (max-width: 991px) {
+    .container {
+        grid-template-rows: 44vh 20vh auto 50vh 10vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__navbar {
+        width: 40%;
+    }
+
+    .header__navbar ul {
+        font-size: 1rem;
+        line-height: 2.5em;
+    }
+
+    .header__logo {
+        margin-bottom: 0;
+    }
+
+    .card-container {
+        width: 80%;
+    }
+
+    .card__caption {
+        font-size: .7rem;
+    }
+
+
+}
